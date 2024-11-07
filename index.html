@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Scores</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Контейнер для всей страницы с горизонтальной прокруткой */
+    .page-container {
+      display: block;
+      overflow-x: auto;
+      width: 100vw;
+    }
+    /* Стили вкладок и содержимого */
+    .tab-content {
+      display: none;
+    }
+    .table-container {
+      display: flex;
+      gap: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="page-container">
+    <h1>Оценки учащихся</h1>
+
+    <!-- Панель вкладок -->
+    <div id="tabs">
+      <button onclick="openTab('chin9c')">9 С Чиненова</button>
+      <button onclick="openTab('gergedava9c')">9 С Гергедава</button>
+      <button onclick="openTab('nonchin9c')">9 НО Чиненова</button>
+      <button onclick="openTab('mkhitaryan9o')">9 О Мхиторян</button>
+      <button onclick="openTab('maslova9kr')">9 КР Маслова</button>
+    </div>
+
+    <!-- Вкладка 9 С Чиненова -->
+    <div id="chin9c" class="tab-content">
+      <h2>9 С Чиненова</h2>
+      <div class="table-container">
+        <!-- Таблицы и кнопки -->
+        <table id="geometryTable">
+          <caption>Геометрия</caption>
+          <thead>
+            <tr>
+              <th contenteditable="true">Фамилия</th>
+              <th contenteditable="true">01.09</th>
+              <th contenteditable="true">02.09</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td contenteditable="true">Иванов</td>
+              <td contenteditable="true">5</td>
+              <td contenteditable="true">4</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="button-container">
+          <button onclick="addRow('geometryTable')">Добавить строку</button>
+          <button onclick="addColumn('geometryTable')">Добавить столбец</button>
+          <button onclick="deleteRow('geometryTable')">Удалить строку</button>
+          <button onclick="deleteColumn('geometryTable')">Удалить столбец</button>		
+        </div>
+
+        <table id="algebraTable">
+          <caption>Алгебра</caption>
+          <thead>
+            <tr>
+              <th contenteditable="true">Фамилия</th>
+              <th contenteditable="true">01.09</th>
+              <th contenteditable="true">02.09</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td contenteditable="true">Иванов</td>
+              <td contenteditable="true">5</td>
+              <td contenteditable="true">4</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="button-container">
+          <button onclick="addRow('algebraTable')">Добавить строку</button>
+          <button onclick="addColumn('algebraTable')">Добавить столбец</button>
+          <button onclick="deleteRow('algebraTable')">Удалить строку</button>
+          <button onclick="deleteColumn('algebraTable')">Удалить столбец</button>		
+        </div>
+      </div>
+    </div>
+    
+  <!-- Вкладка 9 С Гергедава -->
+  <div id="gergedava9c" class="tab-content">
+    <h2>9 С Гергедава</h2>
+    <div class="table-container">
+      <table id="geometryTable2">
+        <caption>Геометрия</caption>
+        <thead>
+          <tr>
+            <th contenteditable="true">Фамилия</th>
+            <th contenteditable="true">01.09</th>
+            <th contenteditable="true">02.09</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td contenteditable="true">Петров</td>
+            <td contenteditable="true">4</td>
+            <td contenteditable="true">5</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="button-container">
+        <button onclick="addRow('geometryTable2')">Добавить строку</button>
+        <button onclick="addColumn('geometryTable2')">Добавить столбец</button>
+		<button onclick="deleteRow('geometryTable2')">Удалить строку</button>
+		<button onclick="deleteColumn('geometryTable2')">Удалить столбец</button>		
+      </div>
+
+      <table id="algebraTable2">
+        <caption>Алгебра</caption>
+        <thead>
+          <tr>
+            <th contenteditable="true">Фамилия</th>
+            <th contenteditable="true" >01.09</th>
+            <th contenteditable="true" >02.09</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td contenteditable="true">Петров</td>
+            <td contenteditable="true">4</td>
+            <td contenteditable="true">5</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="button-container">
+        <button onclick="addRow('algebraTable2')">Добавить строку</button>
+        <button onclick="addColumn('algebraTable2')">Добавить столбец</button>
+		<button onclick="deleteRow('algebraTable2')">Удалить строку</button>
+		<button onclick="deleteColumn('algebraTable2')">Удалить столбец</button>		
+      </div>
+    </div>
+  </div>
+
+  <!-- Вкладка 9 НО Чиненова -->
+  <div id="nonchin9c" class="tab-content">
+    <h2>9 НО Чиненова</h2>
+    <div class="table-container">
+      <table id="geometryTable3">
+        <caption>Геометрия</caption>
+        <thead>
+          <tr>
+            <th contenteditable="true">Фамилия</th>
+            <th contenteditable="true">01.09</th>
+            <th contenteditable="true">02.09</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td contenteditable="true">Сидоров</td>
+            <td contenteditable="true">5</td>
+            <td contenteditable="true">5</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="button-container">
+        <button onclick="addRow('geometryTable3')">Добавить строку</button>
+        <button onclick="addColumn('geometryTable3')">Добавить столбец</button>
+		<button onclick="deleteRow('geometryTable3')">Удалить строку</button>
+		<button onclick="deleteColumn('geometryTable3')">Удалить столбец</button>		
+      </div>
+
+      <table id="algebraTable3">
+        <caption>Алгебра</caption>
+        <thead>
+          <tr>
+            <th contenteditable="true">Фамилия</th>
+            <th contenteditable="true" >01.09</th>
+            <th contenteditable="true" >02.09</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td contenteditable="true">Сидоров</td>
+            <td contenteditable="true">4</td>
+            <td contenteditable="true">5</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="button-container">
+        <button onclick="addRow('algebraTable3')">Добавить строку</button>
+        <button onclick="addColumn('algebraTable3')">Добавить столбец</button>
+		<button onclick="deleteRow('algebraTable3')">Удалить строку</button>
+		<button onclick="deleteColumn('algebraTable3')">Удалить столбец</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Вкладка 9 О Мхиторян -->
+  <div id="mkhitaryan9o" class="tab-content">
+    <h2>9 О Мхиторян</h2>
+    <div class="table-container">
+      <table id="geometryTable4">
+        <caption>Геометрия</caption>
+        <thead>
+          <tr>
+            <th contenteditable="true">Фамилия</th>
+            <th contenteditable="true">01.09</th>
+            <th contenteditable="true">02.09</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td contenteditable="true">Григорян</td>
+            <td contenteditable="true">4</td>
+            <td contenteditable="true">5</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="button-container">
+        <button onclick="addRow('geometryTable4')">Добавить строку</button>
+        <button onclick="addColumn('geometryTable4')">Добавить столбец</button>
+		<button onclick="deleteRow('geometryTable4')">Удалить строку</button>
+		<button onclick="deleteColumn('geometryTable4')">Удалить столбец</button>	
+      </div>
+
+      <table id="algebraTable4">
+        <caption>Алгебра</caption>
+        <thead>
+          <tr>
+            <th contenteditable="true">Фамилия</th>
+            <th contenteditable="true" >01.09</th>
+            <th contenteditable="true" >02.09</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td contenteditable="true">Григорян</td>
+            <td contenteditable="true">5</td>
+            <td contenteditable="true">4</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="button-container">
+        <button onclick="addRow('algebraTable4')">Добавить строку</button>
+        <button onclick="addColumn('algebraTable4')">Добавить столбец</button>
+		<button onclick="deleteRow('algebraTable4')">Удалить строку</button>
+		<button onclick="deleteColumn('algebraTable4')">Удалить столбец</button>		
+      </div>
+    </div>
+  </div>
+
+  <!-- Вкладка 9 КР Маслова -->
+  <div id="maslova9kr" class="tab-content">
+    <h2>9 КР Маслова</h2>
+    <div class="table-container">
+      <table id="geometryTable5">
+        <caption>Геометрия</caption>
+        <thead>
+          <tr>
+            <th contenteditable="true">Фамилия</th>
+            <th contenteditable="true">01.09</th>
+            <th contenteditable="true">02.09</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td contenteditable="true">Тимофеев</td>
+            <td contenteditable="true">5</td>
+            <td contenteditable="true">5</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="button-container">
+        <button onclick="addRow('geometryTable5')">Добавить строку</button>
+        <button onclick="addColumn('geometryTable5')">Добавить столбец</button>
+		<button onclick="deleteRow('geometryTable5')">Удалить строку</button>
+		<button onclick="deleteColumn('geometryTable5')">Удалить столбец</button>		
+      </div>
+
+      <table id="algebraTable5">
+        <caption>Алгебра</caption>
+        <thead>
+          <tr>
+            <th contenteditable="true">Фамилия</th>
+            <th contenteditable="true" >01.09</th>
+            <th contenteditable="true" >02.09</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td contenteditable="true">Тимофеев</td>
+            <td contenteditable="true">4</td>
+            <td contenteditable="true">5</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="button-container">
+        <button onclick="addRow('algebraTable5')">Добавить строку</button>
+        <button onclick="addColumn('algebraTable5')">Добавить столбец</button>
+		<button onclick="deleteRow('algebraTable5')">Удалить строку</button>
+		<button onclick="deleteColumn('algebraTable5')">Удалить столбец</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
